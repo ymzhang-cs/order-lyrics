@@ -8,7 +8,7 @@ def get_desktop():
     return winreg.QueryValueEx(key, "Desktop")[0]
 desktopPath = get_desktop()
 
-getOpenFile = input("请输入歌词路径（包含文件名，不许带引号。可以使用$d$表示桌面）（必须以日语、中文、罗马音的形式出现）：")
+getOpenFile = input("请输入歌词路径（包含文件名，不许带引号。可以使用$d$表示桌面）：")
 openFile = getOpenFile.replace("$d$", desktopPath)
 
 getInputType = input("请输入你的歌词的格式（r表示罗马音，j表示日语，c表示中文翻译。格式如rjc）：")
